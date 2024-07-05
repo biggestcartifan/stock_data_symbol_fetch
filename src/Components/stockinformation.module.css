@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Ensure items stack vertically */
+    height: 500px;
+    width: 1530px;
+    padding: 20px;
+    margin-top: 55px;
+    margin-left: 250px;
+    background-color: #fff;
+    overflow: hidden; /* Prevents text overflow */
+}
+
+.info {
+    font-size: 30px;
+    text-align: center;
+}
+
+.date, .highestPriceClose, .lowestPriceClose {
+    display: block;
+    margin-bottom: 10px; /* Adjust spacing between spans */
+}

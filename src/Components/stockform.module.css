@@ -1,0 +1,49 @@
+.side {
+    width: 250px;
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 1; /* Ensure the sidebar is below the overlay text */
+}
+  
+.container {
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+  
+  .input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px 0 0 20px;
+    box-sizing: border-box;
+    outline: none;
+}
+  
+.search {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    padding: 10px 10px;
+    cursor: pointer;
+    height: 100%;
+}
+.news{
+    position: fixed;
+    top: 63px;
+    left: 5px; /* Adjust this value to position the text as needed */
+    z-index: 2; /* Ensure the text is above the sidebar */
+    color: black; /* Change to desired text color */
+    display: block;
+    font-size:35px;
+}
