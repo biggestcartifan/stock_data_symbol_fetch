@@ -3,17 +3,16 @@ import moment from "moment";
 import styles from './stockform.module.css'
 import StockNewsForm from "./StockNewsForm";
 import {motion} from "framer-motion"
+
 export default function StockForm({setLastRefresh, stockData, setStockData, symbolData, setSymbolData}) {
     const [search, setSearch] = useState("")
     const URL = "https://www.alphavantage.co/query"; 
-    const API_KEY = "";
+    const API_KEY = import.meta.env.REACT_APP_API_KEY
     async function handleSubmit(e) {
         e.preventDefault()
         setSearch("")
-        const res = await fetch(`${URL}?function=TIME_SERIES_INTRADAY&symbol=${search}&extended_hours=false&interval=5min&apikey=REPLACE_WITH_API_KEY`);
+        const res = await fetch(`${URL}?function=TIME_SERIES_INTRADAY&symbol=${search}&extended_hours=false&interval=5min&apikey=${API_KEY}`);
         const data = await res.json();
-        console.log(data['Time Series (5min)'])
-        console.log(data['Meta Data'])
 
         const symbolDataInformation = data['Meta Data']
         const symbol = symbolDataInformation['2. Symbol'].toUpperCase()

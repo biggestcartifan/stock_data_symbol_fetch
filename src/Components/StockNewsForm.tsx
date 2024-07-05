@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import styles from './stocknewsform.module.css'
 import moment from "moment";
+
 export default function StockNewsForm() {
     const URL = "https://finnhub.io/api/v1/news?category=general&token=";
-    const API_KEY = "cq11n8hr01qs7bchbddgcq11n8hr01qs7bchbde0"
+    const API_KEY = import.meta.env.REACT_APP_API_KEY2
 
     const [generalNews, setGeneralNews] = useState([])
     const [generalTime, setGeneralTime] = useState([])
