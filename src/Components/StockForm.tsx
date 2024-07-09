@@ -7,7 +7,7 @@ import {motion} from "framer-motion"
 export default function StockForm({setLastRefresh, stockData, setStockData, symbolData, setSymbolData}) {
     const [search, setSearch] = useState("")
     const URL = "https://www.alphavantage.co/query"; 
-    const API_KEY = import.meta.env.REACT_APP_API_KEY
+    const API_KEY = import.meta.env.VITE_REACT_APP_API_KEY
     async function handleSubmit(e) {
         e.preventDefault()
         setSearch("")

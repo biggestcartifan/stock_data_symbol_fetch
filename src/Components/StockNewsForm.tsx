@@ -4,7 +4,7 @@ import moment from "moment";
 
 export default function StockNewsForm() {
     const URL = "https://finnhub.io/api/v1/news?category=general&token=";
-    const API_KEY = import.meta.env.REACT_APP_API_KEY2
+    const API_KEY = import.meta.env.VITE_REACT_APP_API_KEY_2
 
     const [generalNews, setGeneralNews] = useState([])
     const [generalTime, setGeneralTime] = useState([])
